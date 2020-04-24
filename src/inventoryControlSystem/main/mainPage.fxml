@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:controller="inventoryControlSystem.main.MainPageController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #28d73f;" text="Priyalal Stores" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnLogIn" layoutX="353.0" layoutY="335.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" style="-fx-border-color: #000000; -fx-background-color: #28d73f;" text="Log In to Existing Account" textFill="WHITE" onAction="#logIn"/>
+      <Label alignment="CENTER" layoutX="300.0" layoutY="59.0" prefHeight="42.0" prefWidth="300.0" text="Create a new account">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="319.0" fitWidth="300.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@mainpage.jpg" />
+         </image></ImageView>
+      <TextField fx:id="txtUsername" layoutX="343.0" layoutY="117.0" prefHeight="25.0" prefWidth="214.0" promptText="Username" />
+      <PasswordField fx:id="txtPassword" layoutX="343.0" layoutY="175.0" prefHeight="25.0" prefWidth="214.0" promptText="Password" />
+      <Button fx:id="btnSignUp" alignment="CENTER" layoutX="421.0" layoutY="237.0" mnemonicParsing="false" style="-fx-background-color: #28d73f; -fx-border-color: #000000;" text="Sign Up" textFill="WHITE" onAction="#signUp" />
+      <Separator layoutX="343.0" layoutY="295.0" prefHeight="0.0" prefWidth="214.0" />
+   </children>
+</AnchorPane>

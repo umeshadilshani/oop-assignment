@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:controller="inventoryControlSystem.categories.AddCategoryController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane blendMode="MULTIPLY" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #b8b8b8;" />
+      <VBox layoutX="176.0" layoutY="95.0" prefHeight="210.0" prefWidth="250.0">
+         <children>
+            <HBox prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtCategoryId" prefHeight="25.0" prefWidth="253.0" promptText="Enter Category Id/*integer required" />
+               </children>
+            </HBox>
+            <HBox prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtCategoryName" prefHeight="25.0" prefWidth="253.0" promptText="Enter Category Name" />
+               </children>
+            </HBox>
+            <HBox prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txtDescription" prefHeight="25.0" prefWidth="253.0" promptText="Category Description" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #28d73f;" text="Add Category">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAdd" layoutX="268.0" layoutY="325.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="67.0" style="-fx-background-color: #28d73f; -fx-border-color: #000000;" text="Add" onAction="#addCategory"/>
+   </children>
+</AnchorPane>

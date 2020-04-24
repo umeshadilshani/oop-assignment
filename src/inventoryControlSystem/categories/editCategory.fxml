@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventoryControlSystem.categories.EditCategoryController">
+   <children>
+      <Button fx:id="btnEdit" alignment="CENTER" layoutX="269.0" layoutY="334.0" mnemonicParsing="false" onAction="#edit" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: #28d73f; -fx-border-color: #000000;" text="Edit" />
+      <Label alignment="CENTER" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #28d73f;" text="Edit Category">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCategoryId" layoutX="227.0" layoutY="90.0" promptText="Category id" />
+      <TextField fx:id="txtNewCategoryName" layoutX="227.0" layoutY="212.0" promptText="New Category Name " />
+      <TextField fx:id="txtNewCategoryId" layoutX="227.0" layoutY="145.0" promptText="New Category id" />
+      <ChoiceBox fx:id="check" layoutX="69.0" layoutY="90.0" prefWidth="150.0" />
+      <TextField layoutX="226.0" layoutY="280.0" promptText="New description" />
+   </children>
+</AnchorPane>
