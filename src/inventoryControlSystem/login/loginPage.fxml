@@ -6,7 +6,6 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventoryControlSystem.login.LoginPageController">
     <children>
-      <Pane blendMode="MULTIPLY" layoutY="59.0" prefHeight="341.0" prefWidth="600.0" style="-fx-background-color: #b8b8b8;" />
         <Label alignment="CENTER" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #28d73f;" text="Priyalal Stores" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="26.0" />

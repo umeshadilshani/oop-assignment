@@ -30,22 +30,43 @@ public class MainPageController {
     Button btnLogIn;
 
     @FXML
-    public void signUp(ActionEvent actionEvent)throws Exception{
+    public void signUp(ActionEvent actionEvent) throws Exception {
         String username = txtUsername.getText();
         String password = txtPassword.getText();
 
-        if(username.equals("") || password.equals("")){
+        if (username.equals("") || password.equals("")) {
             AlertBox.required();
-        }else{
+        } else {
             MongoDatabase database = DbConnection.connect();
             MongoCollection collection = database.getCollection("login");
 
-            Document document = new Document();
-            document.put("Username", txtUsername.getText());
-            document.put("Password", txtPassword.getText());
+            Document found = (Document) collection.find(new Document("Username", username)).first();
+            Document found1 = (Document) collection.find(new Document("Password", password)).first();
 
-            collection.insertOne(document);
+            if (found == null && found1 == null) {
+                Document document = new Document();
+                document.put("Username", username);
+                document.put("Password", password);
 
+
+                collection.insertOne(document);
+
+
+                Stage viewStage = new Stage();
+                Parent root = FXMLLoader.load(getClass().getResource("../login/loginPage.fxml"));
+                viewStage.setTitle("Log In");
+                viewStage.setScene(new Scene(root, 600, 400));
+                viewStage.show();
+
+                Stage previousStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                previousStage.close();
+            } else {
+                AlertBox.exist();
+            }
+        }
+    }
+        @FXML
+        public void logIn (ActionEvent actionEvent)throws Exception {
             Stage viewStage = new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("../login/loginPage.fxml"));
             viewStage.setTitle("Log In");
@@ -56,15 +77,5 @@ public class MainPageController {
             previousStage.close();
         }
     }
-    @FXML
-    public void logIn(ActionEvent actionEvent)throws Exception{
-        Stage viewStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("../login/loginPage.fxml"));
-        viewStage.setTitle("Log In");
-        viewStage.setScene(new Scene(root, 600, 400));
-        viewStage.show();
 
-        Stage previousStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        previousStage.close();
-    }
-}
+

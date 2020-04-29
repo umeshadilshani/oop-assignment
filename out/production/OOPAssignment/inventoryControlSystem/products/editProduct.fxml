@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventoryControlSystem.products.EditProductController">
+    <children>
+        <Button fx:id="btnEdit" alignment="CENTER" layoutX="269.0" layoutY="334.0" mnemonicParsing="false" onAction="#edit" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: #28d73f; -fx-border-color: #000000;" text="Edit" />
+        <Label alignment="CENTER" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #28d73f;" text="Edit Product">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+        <TextField fx:id="txtProductId" layoutX="226.0" layoutY="149.0" promptText="Product id" />
+        <TextField fx:id="txtNewProductName" layoutX="227.0" layoutY="212.0" promptText="New Product Name " />
+        <ChoiceBox fx:id="check" layoutX="227.0" layoutY="96.0" prefWidth="150.0" />
+        <TextField fx:id="txtDescription" layoutX="226.0" layoutY="254.0" promptText="New description" />
+      <TextField fx:id="txtPrice" layoutX="228.0" layoutY="289.0" promptText="New price" />
+    </children>
+</AnchorPane>

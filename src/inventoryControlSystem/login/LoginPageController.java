@@ -1,6 +1,5 @@
 package inventoryControlSystem.login;
 
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import inventoryControlSystem.AlertBox;
@@ -38,13 +37,10 @@ public class LoginPageController {
             MongoDatabase database = DbConnection.connect();
             MongoCollection collection = database.getCollection("login");
 
-            FindIterable<Document> findIterable = collection.find();
+            Document found1 = (Document) collection.find(new Document("Username", username)).first();
+            Document found2 = (Document) collection.find(new Document("Password", password)).first();
 
-            for (Document found : findIterable) {
-                String Username = (found.getString("Username"));
-                String Password = (found.getString("Password"));
-
-                if ((username.contentEquals(Username)) && (password.contentEquals(Password))){
+            if(found1 != null && found2 !=null){
                     Stage viewStage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("../home/homePage.fxml"));
                     viewStage.setTitle("Home Page");
@@ -59,4 +55,4 @@ public class LoginPageController {
             }
         }
     }
-}
+

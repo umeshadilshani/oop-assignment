@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventoryControlSystem.products.AddProductController">
+   <children>
+      <Button fx:id="btnAdd" layoutX="274.0" layoutY="337.0" mnemonicParsing="false" onAction="#add" text="Add" />
+      <TextField fx:id="txtProductName" layoutX="219.0" layoutY="150.0" promptText="Product Name" />
+      <TextField fx:id="txtProductId" layoutX="219.0" layoutY="101.0" promptText="Product Id" />
+      <TextField fx:id="txtDescription" layoutX="219.0" layoutY="188.0" promptText="Product Description" />
+      <TextField fx:id="txtPrice" layoutX="219.0" layoutY="230.0" promptText="Unit Price" />
+      <ComboBox fx:id="find" layoutX="218.0" layoutY="14.0" prefWidth="150.0" />
+      <TextField fx:id="txtCategoryId" layoutX="219.0" layoutY="54.0" promptText="Category Id" />
+      <Button fx:id="btnFill" layoutX="387.0" layoutY="54.0" mnemonicParsing="false" onAction="#fill" text="Auto Fill" />
+      <TextField fx:id="txtQuantity" layoutX="219.0" layoutY="276.0" promptText="quantity" />
+   </children>
+</AnchorPane>

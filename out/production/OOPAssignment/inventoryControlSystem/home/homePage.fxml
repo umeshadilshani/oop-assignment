@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:controller="inventoryControlSystem.home.HomePageController" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventoryControlSystem.home.HomePageController">
    <children>
       <Label alignment="CENTER" layoutX="207.0" prefHeight="25.0" prefWidth="292.0" style="-fx-background-color: #28d73f;" text="Priyalal Stores - Inventory Control System" textFill="WHITE">
          <font>
@@ -18,25 +18,32 @@
       </Label>
       <Label alignment="TOP_LEFT" layoutX="390.0" layoutY="366.0" prefHeight="20.0" prefWidth="196.0" style="-fx-background-color: #000000;" text="Contact Number  - 011*******" textFill="WHITE" />
       <Label alignment="CENTER" layoutX="164.0" layoutY="78.0" prefHeight="20.0" prefWidth="272.0" text="You can access your inventories here." />
-      <Button layoutX="499.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Log Out" />
+      <Button fx:id="btnLogOut" layoutX="499.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Log Out" onAction="#back"/>
       <MenuBar>
         <menus>
           <Menu mnemonicParsing="false" text="Categories">
             <items>
-              <MenuItem fx:id="menuItemAddCategory" mnemonicParsing="false" text="Add" onAction="#addCategory"/>
-                  <MenuItem fx:id="menuItemDeleteCategory" mnemonicParsing="false" text="Delete" onAction="#deleteCategory"/>
-                  <MenuItem fx:id="menuItemEditCategory" mnemonicParsing="false" text="Edit" onAction="#editCategory"/>
-                  <MenuItem mnemonicParsing="false" text="View" />
+              <MenuItem fx:id="menuItemAddCategory" mnemonicParsing="false" onAction="#addCategory" text="Add" />
+                  <MenuItem fx:id="menuItemDeleteCategory" mnemonicParsing="false" onAction="#deleteCategory" text="Delete" />
+                  <MenuItem fx:id="menuItemEditCategory" mnemonicParsing="false" onAction="#editCategory" text="Edit" />
+                  <MenuItem fx:id="menuItemViewCategory" mnemonicParsing="false" onAction="#viewCategory" text="View" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Products">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="menuItemAddProduct" mnemonicParsing="false" onAction="#addProduct" text="Add Product" />
+                  <MenuItem fx:id="menuItemDeleteProduct" mnemonicParsing="false" onAction="#deleteProduct" text="Delete Product" />
+                  <MenuItem fx:id="menuItemEditProduct" mnemonicParsing="false" onAction="#editProduct" text="Edit Product" />
+                  <MenuItem fx:id="menuItemSearchProduct" mnemonicParsing="false" onAction="#searchProduct" text="Search Product" />
+                  <MenuItem fx:id="menuItemViewProduct" mnemonicParsing="false" onAction="#viewProduct" text="View Product" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Stocks">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="menuItemAddStocks" mnemonicParsing="false" onAction="#addStock" text="Add Stocks" />
+                  <MenuItem fx:id="menuItemRemoveStocks" mnemonicParsing="false" text="Remove Stocks" onAction="#removeStock" />
+                  <MenuItem fx:id="menuItemSearchStocks" mnemonicParsing="false" text="Search Stock" onAction="#searchStock"/>
+                  <MenuItem fx:id="menuItemViewStocks" mnemonicParsing="false" text="View Stock" onAction="#viewStock" />
             </items>
           </Menu>
         </menus>
